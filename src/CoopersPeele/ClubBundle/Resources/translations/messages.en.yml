@@ -5,6 +5,29 @@ nav:
     members:            Members
     activities:         Activities
 
+home:
+    intro: >
+        <h1>Club demo app</h1>
+        <p>This app is a demonstration application designed to illustrate some of our tutorials.</p>
+        <p>The following tutorials currently make use of this app:</p>
+        <ul class="lead">
+            <li>
+                <a href="http://www.coopers-peele.com/blog/2015/03/symfony-dynamic-forms-and-data-transformers-1/"
+                    target="tutorials">
+                    Symfony — Dynamic forms and data transformers (part 1)
+                </a>
+            </li>
+            <li>
+                <a href="http://www.coopers-peele.com/blog/2015/05/admin-index-pages-with-datatables/"
+                    target="tutorials">
+                    Creating admin index pages with DataTables
+                </a>
+            </li>
+        </ul>
+    page_title: Club Demo app
+    warning: >
+        This app is purely for demonstration purposes and should not be used in
+        any kind of production setting.
 activity:
     create:
         page_title:     Create a new activity

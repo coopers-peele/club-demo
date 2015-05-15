@@ -26,7 +26,7 @@ class ActivityController extends Controller
 
     /**
      * @Route(
-     *      "/",
+     *      "/activity",
      *      name="activities"
      * )
      *

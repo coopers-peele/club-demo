@@ -1,0 +1,14 @@
+{% extends "::base.html.twig" %}
+
+{% block page_title %}
+	{% trans %}home.page_title{% endtrans %}
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+	{% trans %}home.intro{% endtrans %}
+</div>
+<div class="alert alert-danger">
+	{% trans %}home.warning{% endtrans %}
+</div>
+{% endblock %}
