@@ -6,7 +6,7 @@ This is a demonstration app designed to illustrate some of our tutorials. The fo
 * [Symfony — Dynamic forms and data transformers (part 1)](http://www.coopers-peele.com/blog/2015/03/symfony-dynamic-forms-and-data-transformers-1/)
 *  [Creating admin index pages with datatables](http://www.coopers-peele.com/blog/2015/05/admin-index-pages-with-datatables/)
 
-<div class="alert alert-danger">This app is for demonstration purposes only and should not be used in any kindof production setting.</div>
+**NOTE: This app is for demonstration purposes only and should not be used in any kind of production setting.**
 
 Requirements
 ------------
