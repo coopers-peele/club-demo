@@ -1,0 +1,9 @@
+{% extends '::base.html.twig' %}
+
+{% block page_title %}
+	{% trans %}activity.create.page_title{% endtrans %}
+{% endblock %}
+
+{% block content %}
+	{{ form(form) }}
+{% endblock %}

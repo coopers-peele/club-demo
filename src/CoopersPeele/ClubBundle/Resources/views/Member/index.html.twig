@@ -1,0 +1,83 @@
+{% extends "::base.html.twig" %}
+
+{% block body_class %}uamdatatables{% endblock %}
+
+{% block page_title %}
+	{% trans %}members.page_title{% endtrans %}
+{% endblock %}
+
+{% block content %}
+<table class="table table-hover table-condensed dataTable">
+	<thead>
+		<tr>
+			<th class="last_name">{% trans %}member.last_name{% endtrans %}</th>
+			<th class="first_name">{% trans %}member.first_name{% endtrans %}</th>
+			<th class="date">{% trans %}member.date_joined{% endtrans %}</th>
+			<th class="date">{% trans %}member.date_left{% endtrans %}</th>
+			<th class="actions"></th>
+		</tr>
+		<tr class="filters">
+			<th>{{ form_widget(filter.last_name) }}</th>
+			<th>{{ form_widget(filter.first_name) }}</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+	</tbody>
+</table>
+
+<div class="mustache">
+	<div class="actions">
+		<a href="{% verbatim %}{{urls.show}}{% endverbatim %}"><i class="fa fa-eye"></i></a>
+		<a href="{% verbatim %}{{urls.edit}}{% endverbatim %}"><i class="fa fa-pencil"></i></a>
+	</div>
+</div>
+{% endblock %}
+
+{% block head_style %}
+	{{ parent() }}
+	{% include "UAMDatatablesBundle:Datatables:head_style.html.twig" %}
+{% endblock %}
+
+{% block foot_script %}
+	{{ parent() }}
+	{% include "UAMDatatablesBundle:Datatables:foot_script_with_mustache.html.twig" %}
+	<script>
+	var uamdatatables = {
+		ajax: {
+			url: "{{ path('member_list') }}"
+		},
+		columns: [
+			{
+				data: function( row, type, val, meta ) {
+					if ( "display" === type ) {
+						var template = "<a href='{% verbatim %}{{urls.show}}{% endverbatim %}'>{% verbatim %}{{last_name}}{% endverbatim %}</a>";
+						return Mustache.render( template, row );
+					}
+
+					return "";
+				}
+			},
+			{ data: "first_name" },
+			{ data: "date_joined" },
+			{ data: "date_left" },
+			{
+				data: function( row, type, val, meta ) {
+					if ( "display" === type ) {
+						var template = $( ".mustache .actions" ).html();
+						return Mustache.render( template, row );
+					}
+
+					return "";
+				},
+				orderable: false
+			},
+		],
+		locale: "{{ app.request.locale }}",
+		orderCellsTop: true,
+		searching: false
+	};
+	</script>
+{% endblock %}

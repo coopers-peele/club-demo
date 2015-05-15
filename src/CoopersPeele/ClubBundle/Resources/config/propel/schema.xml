@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<database name="default" namespace="CoopersPeele\ClubBundle\Propel" defaultIdMethod="native">
+	<table name="member" idMethod="native">
+		<column name="id"          type="integer" primaryKey="true" autoIncrement="true" required="true" />
+		<column name="firstName"   type="varchar" size="255" required="true" />
+		<column name="lastName"    type="varchar" size="255" required="true" />
+		<column name="date_joined" type="date" required="true" />
+		<column name="date_left"   type="date" defaultValue="null" />
+	</table>
+	<table name="activity" idMethod="native">
+		<column name="id"   type="integer" primaryKey="true" autoIncrement="true" required="true" />
+		<column name="name" type="varchar" size="255" required="true" />
+		<column name="date" type="date" required="true" />
+	</table>
+	<table name="participant" idMethod="native" isCrossRef="true">
+		<column name="id" type="integer" primaryKey="true" required="true" autoIncrement="true" />
+		<column name="member_id"   type="integer" required="true" />
+		<column name="activity_id" type="integer" required="true" />
+		<foreign-key foreignTable="member" name="FK_participant_member">
+			<reference local="member_id" foreign="id" />
+		</foreign-key>
+		<foreign-key foreignTable="activity" name="FK_participant_activity">
+			<reference local="activity_id" foreign="id" />
+		</foreign-key>
+	</table>
+</database>

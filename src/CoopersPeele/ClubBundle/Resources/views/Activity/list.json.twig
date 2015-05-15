@@ -1,0 +1,15 @@
+{% extends "UAMDatatablesBundle:Datatables:list.json.twig" %}
+
+{% block data %}
+	{% set activity = entity %}
+{
+	"DT_RowId": "{{ 'activity_' ~ activity.id }}",
+	"id":"{{ activity.id }}",
+	"name": "{{ activity.name }}",
+	"date": "{{ activity.date('Y-m-d') }}",
+	"count_participants": {{ activity.countParticipants }},
+	"urls": {
+		"show": "{{ path('activity_show', { id: activity.id }) }}"
+	}
+}
+{% endblock %}

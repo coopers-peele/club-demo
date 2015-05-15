@@ -1,0 +1,201 @@
+CoopersPeele\ClubBundle\Propel\Member:
+    Member_1:
+        firstname: Kariane
+        lastname: Friesen
+        date_joined: '1998-02-05'
+    Member_2:
+        firstname: Ruthie
+        lastname: Hauck
+        date_joined: '1988-05-18'
+    Member_3:
+        firstname: Kenyatta
+        lastname: Medhurst
+        date_joined: '1982-02-18'
+    Member_4:
+        firstname: Eugenia
+        lastname: Botsford
+        date_joined: '2001-05-10'
+    Member_5:
+        firstname: Veronica
+        lastname: Wilderman
+        date_joined: '2001-06-29'
+    Member_6:
+        firstname: Chanel
+        lastname: DuBuque
+        date_joined: '1977-01-15'
+    Member_7:
+        firstname: Felton
+        lastname: Haag
+        date_joined: '1988-09-15'
+    Member_8:
+        firstname: Kirsten
+        lastname: Haley
+        date_joined: '2005-03-18'
+    Member_9:
+        firstname: Natasha
+        lastname: Wuckert
+        date_joined: '1987-07-09'
+    Member_10:
+        firstname: Bridget
+        lastname: Reichert
+        date_joined: '1972-03-20'
+    Member_11:
+        firstname: Nadia
+        lastname: Schaefer
+        date_joined: '1992-03-26'
+    Member_12:
+        firstname: Keegan
+        lastname: Huels
+        date_joined: '1993-01-06'
+    Member_13:
+        firstname: Violette
+        lastname: Feil
+        date_joined: '2013-06-06'
+    Member_14:
+        firstname: Demond
+        lastname: Beahan
+        date_joined: '1980-05-19'
+    Member_15:
+        firstname: Muhammad
+        lastname: Jacobi
+        date_joined: '2003-12-06'
+    Member_16:
+        firstname: Amina
+        lastname: Carroll
+        date_joined: '1999-01-22'
+    Member_17:
+        firstname: Cicero
+        lastname: Rempel
+        date_joined: '1977-07-07'
+    Member_18:
+        firstname: Al
+        lastname: Senger
+        date_joined: '1978-09-30'
+    Member_19:
+        firstname: Ludie
+        lastname: Balistreri
+        date_joined: '2005-01-30'
+    Member_20:
+        firstname: Therese
+        lastname: Luettgen
+        date_joined: '2010-05-06'
+    Member_21:
+        firstname: Elda
+        lastname: White
+        date_joined: '1987-07-17'
+    Member_22:
+        firstname: Florian
+        lastname: Frami
+        date_joined: '1985-10-14'
+    Member_23:
+        firstname: Janelle
+        lastname: Hansen
+        date_joined: '1977-01-28'
+    Member_24:
+        firstname: Ebony
+        lastname: Bradtke
+        date_joined: '2003-07-20'
+    Member_25:
+        firstname: Rose
+        lastname: Turner
+        date_joined: '2015-02-27'
+    Member_26:
+        firstname: Rita
+        lastname: Hartmann
+        date_joined: '1970-01-02'
+    Member_27:
+        firstname: Avis
+        lastname: Lemke
+        date_joined: '1971-04-02'
+    Member_28:
+        firstname: Pattie
+        lastname: Homenick
+        date_joined: '2003-10-17'
+    Member_29:
+        firstname: Shirley
+        lastname: Gaylord
+        date_joined: '1970-03-29'
+    Member_30:
+        firstname: Colin
+        lastname: Cummings
+        date_joined: '1993-04-01'
+    Member_31:
+        firstname: Lance
+        lastname: Osinski
+        date_joined: '1991-04-27'
+    Member_32:
+        firstname: Zola
+        lastname: Predovic
+        date_joined: '1981-07-20'
+    Member_33:
+        firstname: Gloria
+        lastname: Weimann
+        date_joined: '1982-03-15'
+    Member_34:
+        firstname: Ken
+        lastname: Mertz
+        date_joined: '2008-09-21'
+    Member_35:
+        firstname: Marc
+        lastname: Cartwright
+        date_joined: '1984-09-16'
+    Member_36:
+        firstname: Karelle
+        lastname: Greenholt
+        date_joined: '1977-11-27'
+    Member_37:
+        firstname: Allen
+        lastname: Kassulke
+        date_joined: '1987-01-10'
+    Member_38:
+        firstname: Harmon
+        lastname: Lakin
+        date_joined: '1991-09-26'
+    Member_39:
+        firstname: Cielo
+        lastname: Von
+        date_joined: '2011-06-11'
+    Member_40:
+        firstname: Eleanore
+        lastname: Bednar
+        date_joined: '1997-04-11'
+    Member_41:
+        firstname: Cecilia
+        lastname: Bogan
+        date_joined: '2001-12-20'
+    Member_42:
+        firstname: Zackary
+        lastname: Barton
+        date_joined: '1970-09-25'
+    Member_43:
+        firstname: Kennith
+        lastname: Yost
+        date_joined: '1981-10-19'
+    Member_44:
+        firstname: Garrick
+        lastname: Cole
+        date_joined: '2008-03-31'
+    Member_45:
+        firstname: Lamont
+        lastname: Stroman
+        date_joined: '1975-05-01'
+    Member_46:
+        firstname: Obie
+        lastname: Rodriguez
+        date_joined: '2000-05-26'
+    Member_47:
+        firstname: Gus
+        lastname: Rohan
+        date_joined: '1992-08-31'
+    Member_48:
+        firstname: Lynn
+        lastname: Pollich
+        date_joined: '1974-03-22'
+    Member_49:
+        firstname: Alaina
+        lastname: Lindgren
+        date_joined: '2012-02-08'
+    Member_50:
+        firstname: Ardella
+        lastname: Mosciski
+        date_joined: '1972-03-12'

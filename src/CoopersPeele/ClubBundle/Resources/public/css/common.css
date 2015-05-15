@@ -1,0 +1,57 @@
+body {
+	padding-top: 50px;
+}
+
+.mustache {
+	display: none;
+}
+
+.loading {
+	display: none;
+}
+
+.activities table.table th.count {
+	text-align: center;
+	width: 6em;
+}
+
+.activity .panel.attendance table tr:first-child td {
+	border-top: none;
+}
+
+.activity .panel.attendance .panel-body {
+	display: none;
+	text-align: center;
+}
+
+.activity .panel.attendance .panel-body .loading {
+	display: block;
+}
+
+.activity .panel.attendance.show .toolbar.edit {
+	display: block;
+}
+
+.activity .panel.attendance.edit .toolbar.edit {
+	display: none;
+}
+
+.activity .panel.attendance.show .toolbar.editing {
+	display: none;
+}
+.activity .panel.attendance.edit .toolbar.editing {
+	display: block;
+}
+
+.activity .panel.attendance.show .participants .absent {
+	display: none;
+}
+
+.activity .panel.attendance.edit .participants .absent {
+	display: table-row;
+}
+
+.activity .panel.attendance .participants td.presence {
+	text-align: center;
+	width: 5em;
+}

@@ -1,0 +1,17 @@
+{% extends "UAMDatatablesBundle:Datatables:list.json.twig" %}
+
+{% block data %}
+	{% set member = entity %}
+{
+	"DT_RowId": "{{ 'member_' ~ member.id }}",
+	"id":"{{ member.id }}",
+	"first_name": "{{ member.firstName }}",
+	"last_name": "{{ member.lastName }}",
+	"date_joined": "{{ member.dateJoined('Y-m-d') }}",
+	"date_left": "{{ member.dateLeft('Y-m-d') }}",
+	"urls": {
+		"show": "{{ path('member_show', { id: member.id }) }}",
+		"edit": "{{ path('member_edit', { id: member.id }) }}"
+	}
+}
+{% endblock %}

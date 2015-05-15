@@ -1,0 +1,54 @@
+{
+	"name": "coopers-peele/symfony-dynamic-forms-and-data-transformers",
+	"license": "MIT",
+	"type": "project",
+	"description": "Sample code for the \"Symfony Dynamic Forms and Data Transformers\" tutorial",
+	"autoload": {
+		"psr-0": { "": "src/" }
+	},
+	"require": {
+		"php": ">=5.3.3",
+		"symfony/symfony": "~2.6",
+		"twig/extensions": "~1.0",
+		"symfony/assetic-bundle": "~2.3",
+		"symfony/swiftmailer-bundle": "~2.3",
+		"symfony/monolog-bundle": "~2.4",
+		"propel/propel-bundle": "~1.4",
+		"willdurand/propel-typehintable-behavior": "1.0.*",
+		"sensio/distribution-bundle": "~3.0,>=3.0.12",
+		"sensio/framework-extra-bundle": "~3.0,>=3.0.2",
+		"incenteev/composer-parameter-handler": "~2.0",
+		"uam/datatables-bundle": "~3.0"
+	},
+	"require-dev": {
+		"fabpot/php-cs-fixer": "2.0.*@dev",
+		"sensio/generator-bundle": "~2.3"
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+			"Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+			"Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+			"Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+			"Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+			"Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
+		],
+		"post-update-cmd": [
+			"Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+			"Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+			"Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+			"Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+			"Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+			"Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
+		]
+	},
+	"extra": {
+		"symfony-app-dir": "app",
+		"symfony-web-dir": "web",
+		"symfony-assets-install": "relative",
+		"incenteev-parameters": {
+			"file": "app/config/parameters.yml"
+		}
+	}
+}
+

@@ -1,0 +1,6 @@
+app:
+    resource: @ClubBundle/Controller/
+    type:     annotation
+homepage:
+    pattern:   /
+    defaults:  { _controller: ClubBundle:Activity:create }

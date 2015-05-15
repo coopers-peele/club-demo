@@ -1,0 +1,48 @@
+title:                  Club administration
+
+nav:
+    home:               Home
+    members:            Members
+    activities:         Activities
+
+activity:
+    create:
+        page_title:     Create a new activity
+    count:              Part.
+    date:               Date
+    form:
+        date:
+            label:      Date
+        description:
+            label:      Name
+    name:               Name
+    participants:
+        select:
+            title:      Select the participants
+    save:               Save
+    show:
+        page_title:          'Activity: %activity% on %date%'
+    submit:             Submit
+
+activities:
+    nav:
+        create:         Create a new activity
+    page_title:         Activities
+
+member:
+    actions:            Actions
+    date_joined:        Joined
+    date_left:          Left
+    first_name:         First name
+    last_name:          Last name
+
+members:
+    page_title:         Club members
+
+participants:
+    title:              Participants
+    toolbar:
+        cancel:         Cancel
+        edit:           Edit
+        submit:         Save
+

@@ -1,0 +1,27 @@
+{
+  "name": "uam/datatables-bundle",
+  "dependencies": {
+    "bootstrap": "*",
+    "font-awesome": "^4.3",
+    "jquery": "~1.11"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/*",
+        "dist/js/*"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "./css/*",
+        "./fonts/*"
+      ]
+    },
+    "jquery": {
+      "main": [
+        "dist/*"
+      ]
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{% extends "::base.html.twig" %}
+
+{% block body_class %}uamdatatables{% endblock %}
+
+{% block page_title %}
+	{% trans %}activities.page_title{% endtrans %}
+{% endblock %}
+
+{% block page_nav %}
+<div class="pull-right">
+	<a class="btn btn-primary" href="{{ path('activity_create') }}">{% trans %}activities.nav.create{% endtrans %}</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<table class="table table-hover table-condensed dataTable">
+	<thead>
+		<tr>
+			<th class="date">{% trans %}activity.date{% endtrans %}</th>
+			<th class="name">{% trans %}activity.name{% endtrans %}</th>
+			<th class="count">{% trans %}activity.count{% endtrans %}</th>
+			<th class="actions"></th>
+		</tr>
+		<tr class="filters">
+			<th></th>
+			<th>{{ form_widget(filter.name) }}</th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+	</tbody>
+</table>
+
+<div class="mustache">
+	<div class="actions">
+		<a href="{% verbatim %}{{urls.show}}{% endverbatim %}"><i class="fa fa-eye"></i></a>
+	</div>
+</div>
+{% endblock %}
+
+{% block head_style %}
+	{{ parent() }}
+	{% include "UAMDatatablesBundle:Datatables:head_style.html.twig" %}
+{% endblock %}
+
+{% block foot_script %}
+	{{ parent() }}
+	{% include "UAMDatatablesBundle:Datatables:foot_script_with_mustache.html.twig" %}
+	<script>
+	var uamdatatables = {
+		ajax: {
+			url: "{{ path('activity_list') }}"
+		},
+		columns: [
+			{ data: "date" },
+			{
+				data: function( row, type, val, meta ) {
+					if ( "display" === type ) {
+						var template = "<a href='{% verbatim %}{{urls.show}}{% endverbatim %}'>{% verbatim %}{{name}}{% endverbatim %}</a>";
+						return Mustache.render( template, row );
+					}
+
+					return "";
+				}
+			},
+			{
+				data: "count_participants",
+				className: "number",
+				orderable: false
+			},
+			{
+				data: function( row, type, val, meta ) {
+					if ( "display" === type ) {
+						var template = $( ".mustache .actions" ).html();
+						return Mustache.render( template, row );
+					}
+
+					return "";
+				},
+				orderable: false
+			},
+		],
+		locale: "{{ app.request.locale }}",
+		orderCellsTop: true,
+		searching: false
+	};
+	</script>
+{% endblock %}

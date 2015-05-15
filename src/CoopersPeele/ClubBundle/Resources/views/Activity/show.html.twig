@@ -1,0 +1,102 @@
+{% extends '::base.html.twig' %}
+
+{% form_theme form _self %}
+
+{% block checkbox_widget %}
+    <input type="checkbox" {{ block('widget_attributes') }}{% if value is defined %} value="{{ value }}"{% endif %}{% if checked %} checked="checked"{% endif %} />
+{% endblock %}
+
+{% block body_class %}activity{% endblock %}
+
+{% block page_title %}
+	{% trans with { '%activity%': activity.name, '%date%': activity.date|date("Y/m/d") } %}activity.show.page_title{% endtrans%}
+{% endblock %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			{{ form_start(form) }}
+			<div class="panel panel-default attendance show">
+				<div class="panel-heading">
+					<div class="toolbar edit pull-right">
+						<a href="#" class="btn btn-primary btn-xs edit">
+							<i class="fa fa-pencil"></i>
+							{% trans %}participants.toolbar.edit{% endtrans %}
+						</a>
+					</div>
+					<div class="toolbar editing pull-right">
+						<a href="#" class="btn btn-warning btn-xs cancel">
+							{% trans %}participants.toolbar.cancel{% endtrans %}
+						</a>
+						<button type="submit" class="btn btn-success btn-xs save">
+							{% trans %}participants.toolbar.submit{% endtrans %}
+						</button>
+					</div>
+					<h4 class="panel-title">{% trans %}participants.title{% endtrans %}</h4>
+				</div>
+				<div class="panel-body">
+					<div class="loading">
+						<i class="fa fa-refresh fa-spin fa-3x"></i>
+					</div>
+				</div>
+				<table class="table table-condensed table-hover participants">
+					<tbody>
+						{% for i, value in form.participants.vars.value %}
+							<tr class="{{ value ? 'present' : 'absent' }}">
+								<td class="participant">{{ form.participants[i].vars.label|raw }}</td>
+								<td class="presence">{{ form_widget(form.participants[i]) }}</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+			{{ form_end(form) }}
+		</div>
+	</div>
+{% endblock %}
+
+{% block foot_script %}
+	{{ parent() }}
+
+	<script>
+	$( document ).ready(function ( e ) {
+
+		$( ".toolbar a.edit" ).click(function ( e ) {
+			e.preventDefault();
+
+			var panel = $( this ).closest( ".attendance" ),
+				participants = panel.find( ".participants" );
+
+			panel
+				.removeClass( "show" )
+				.addClass( "edit" );
+		});
+
+		$( ".toolbar .cancel" ).click(function( e ) {
+			e.preventDefault();
+
+			var panel = $( this ).closest( ".attendance" ),
+				participants = panel.find( ".participants" );
+
+			panel
+				.removeClass( "edit" )
+				.addClass( "show" );
+
+			$( "tr.absent input[type='checkbox']", panel )
+				.prop( "checked", false );
+		});
+
+		$( ".toolbar .save" ).click(function ( e ) {
+			var panel = $( this ).closest( ".attendance" ),
+				body =panel.find( ".panel-body" ),
+				participants = panel.find( ".participants" );
+
+				participants.hide();
+
+				body.show();
+		});
+
+	});
+
+	</script>
+{% endblock %}
