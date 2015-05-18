@@ -20,7 +20,7 @@ gulp.task('bower-files', ['bower-prune'], function() {
 
 gulp.task('minify', ['bower-files'], function() {
 	return gulp.src([
-			FIXME,
+			'../public/vendor/modernizr/modernizr.js',
 			'!../public/vendor/**/*min.js'
 		], { base: '../public/vendor' })
 		.pipe(jsmin())
@@ -28,4 +28,4 @@ gulp.task('minify', ['bower-files'], function() {
 		.pipe(gulp.dest('../public/vendor'));
 });
 
-gulp.task('default', ['bower-files'])
+gulp.task('default', ['minify'])

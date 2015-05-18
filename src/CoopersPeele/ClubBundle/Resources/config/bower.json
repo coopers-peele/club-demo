@@ -3,7 +3,8 @@
   "dependencies": {
     "bootstrap": "*",
     "font-awesome": "^4.3",
-    "jquery": "~1.11"
+    "jquery": "~1.11",
+    "modernizr": "~2.8"
   },
   "overrides": {
     "bootstrap": {
@@ -22,6 +23,11 @@
       "main": [
         "dist/*"
       ]
+    },
+    "modernizr": {
+    	"main": [
+    		"modernizr.js"
+    	]
     }
   }
 }

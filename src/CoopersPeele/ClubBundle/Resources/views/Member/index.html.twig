@@ -28,12 +28,10 @@
 	</tbody>
 </table>
 
-<div class="mustache">
-	<div class="actions">
-		<a href="{% verbatim %}{{urls.show}}{% endverbatim %}"><i class="fa fa-eye"></i></a>
-		<a href="{% verbatim %}{{urls.edit}}{% endverbatim %}"><i class="fa fa-pencil"></i></a>
-	</div>
-</div>
+<template class="actions">
+	<a href="{% verbatim %}{{urls.show}}{% endverbatim %}"><i class="fa fa-eye"></i></a>
+	<a href="{% verbatim %}{{urls.edit}}{% endverbatim %}"><i class="fa fa-pencil"></i></a>
+</template>
 {% endblock %}
 
 {% block head_style %}
@@ -66,7 +64,7 @@
 			{
 				data: function( row, type, val, meta ) {
 					if ( "display" === type ) {
-						var template = $( ".mustache .actions" ).html();
+						var template = $( "template.actions" ).html();
 						return Mustache.render( template, row );
 					}
 
